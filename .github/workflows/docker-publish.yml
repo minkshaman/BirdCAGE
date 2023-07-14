@@ -95,5 +95,5 @@ jobs:
         # against the sigstore community Fulcio instance.
         run: echo "${TAGS}" | xargs -I {} cosign sign --yes {}@${DIGEST}
         
-              - name: Clean up Docker Compose
+      - name: Clean up Docker Compose
         run: docker-compose -f docker-compose.yml down
